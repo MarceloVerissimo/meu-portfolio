@@ -106,16 +106,27 @@
 }
 
 .hero-image {
-  flex-shrink: 0;
+  width: 240px;
+  height: 250px;
+  border-radius: 50%;
+  border: 4px solid #ffffff;
+  box-shadow: 0 5px 15px rgba(153, 153, 153, 0.1);
+  overflow: hidden;
+  position: relative;
+  background-color: #f8f9fa;
 }
 
+
 .hero-image img {
-  width: 240px;
-  height: 240px;
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  top: 40%;
+  left: 0%;
+  transform: translate(-50%, -50%);  
   border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid #4F46E5;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  object-fit: contain;
+  transform: scale(3.7);
 }
 
 .hero-text {
