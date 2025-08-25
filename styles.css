@@ -106,27 +106,35 @@
 }
 
 .hero-image {
-  width: 240px;
-  height: 250px;
+  width: 240px;          /* tamanho padrão */
+  max-width: 100%;       /* nunca ultrapassa a tela */
+  aspect-ratio: 1/1;     /* mantém sempre quadrado */
   border-radius: 50%;
   border: 4px solid #ffffff;
   box-shadow: 0 5px 15px rgba(153, 153, 153, 0.1);
   overflow: hidden;
-  position: relative;
   background-color: #f8f9fa;
 }
 
-
 .hero-image img {
   width: 100%;
-  height: 50%;
-  position: absolute;
-  top: 40%;
-  left: 0%;
-  transform: translate(-50%, -50%);  
+  height: 100%;
+  object-fit: cover;      /* mantém enquadrado */
+  object-position: center;/* centraliza a foto */
   border-radius: 50%;
-  object-fit: contain;
-  transform: scale(3.7);
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .hero-image {
+    width: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-image {
+    width: 140px;
+  }
 }
 
 .hero-text {
